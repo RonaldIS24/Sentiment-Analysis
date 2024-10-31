@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Sentimen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Analisis Sentimen</h1>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <p style="font-size: 20px; color: white;">Masukkan teks sentimen!</p>
+            <form action="/" method="post">
+                <textarea name="message" rows="4" cols="50" placeholder="Masukkan kalimat di sini...">{{ message }}</textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="result-container">
+            <p style="font-size: 20px;">Hasil prediksi sentimen: <strong>{{ prediction }}</strong></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Ronald Ibrahim Supriadinata - 4520210009</p>
+    </footer>
+</body>
+</html>
